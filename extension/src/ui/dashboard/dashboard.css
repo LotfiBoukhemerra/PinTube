@@ -1,0 +1,448 @@
+/* Layout ---------------------------------------------------------------------- */
+.layout {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.main {
+  padding: 28px 32px 64px;
+  min-width: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.block {
+  display: block;
+}
+
+/* Sidebar --------------------------------------------------------------------- */
+.sidebar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100vh;
+  padding: 18px 12px;
+  border-inline-end: 1px solid var(--border);
+  background: var(--surface);
+  overflow-y: auto;
+}
+
+.sidebar-brand {
+  padding: 0 8px 14px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.nav-link svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.nav-link:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.nav-link.active {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.nav-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-aside {
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding: 0 4px 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+}
+
+.nav-collections {
+  flex: 1;
+}
+
+.nav-bottom {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.sidebar-form {
+  padding: 4px 4px 8px;
+}
+
+.sidebar-form .input {
+  width: 100%;
+}
+
+.sidebar-form .notice {
+  margin-top: 6px;
+}
+
+/* Page ------------------------------------------------------------------------ */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1040px;
+}
+
+.page-narrow {
+  max-width: 720px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.page-title-input {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.page-heading .notice {
+  margin: 6px 0;
+}
+
+.page-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.collection-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collection-progress .progress {
+  flex: 1;
+  max-width: 360px;
+  height: 6px;
+}
+
+/* Toolbar ---------------------------------------------------------------------- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.search .icon {
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 10px;
+  transform: translateY(-50%);
+  color: var(--text-3);
+}
+
+.search .input {
+  width: 100%;
+  padding-inline-start: 34px;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.segmented button {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-2);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.segmented button.active {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+/* Video cards ------------------------------------------------------------------ */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.video {
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+}
+
+.video-thumb-link {
+  flex: none;
+  align-self: flex-start;
+}
+
+.video-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.video-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.video-title {
+  font-weight: 600;
+  font-size: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-title:hover {
+  color: var(--accent-text);
+}
+
+.video-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.select-sm {
+  min-height: 28px;
+  padding: 2px 8px;
+  font-size: 13px;
+  max-width: 200px;
+}
+
+/* Bookmarks -------------------------------------------------------------------- */
+.bookmarks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.bookmark-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bookmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+}
+
+.bookmark-note {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* A bookmark saved without a note: the empty spot invites adding one. */
+.bookmark-note-empty {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-3);
+  font: inherit;
+  font-size: 12px;
+  text-align: start;
+  cursor: pointer;
+}
+
+.bookmark-note-empty:hover {
+  color: var(--accent-text);
+}
+
+.bookmark-edit,
+.bookmark-add {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+  align-items: center;
+}
+
+.bookmark-edit .input,
+.bookmark-add .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.bookmark-add .bookmark-time-input {
+  flex: 0 0 110px;
+}
+
+/* Empty state ------------------------------------------------------------------ */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.empty h2 {
+  font-size: 18px;
+}
+
+.empty p {
+  max-width: 420px;
+}
+
+.empty-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.empty-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Sections (settings) ------------------------------------------------------------ */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.privacy .icon {
+  color: var(--success);
+}
+
+.danger-zone {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Small screens ---------------------------------------------------------------- */
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    border-inline-end: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main {
+    padding: 20px 16px 48px;
+  }
+
+  .video {
+    flex-direction: column;
+  }
+
+  .video-thumb-link .thumb {
+    width: 100% !important;
+  }
+}
