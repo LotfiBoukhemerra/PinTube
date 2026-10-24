@@ -23,7 +23,8 @@ export default defineConfig({
       ? {
           browser_specific_settings: {
             gecko: {
-              id: 'pintube@pintube.app',
+              // Never change it once published: Firefox ties updates and user data to this id.
+              id: 'extension@pintube.app',
               // 142 = first version supporting data_collection_permissions.
               strict_min_version: '142.0',
               // The library never leaves the device.
