@@ -4,6 +4,24 @@ Pin YouTube videos, save your progress and timestamped notes, organise them into
 
 **Open source and free.** Every feature is free with no limits, and your library never leaves your device. Cloud sync across devices is planned for a later release.
 
+## Install
+
+<table>
+  <tr>
+    <td align="center" width="110"><a href="https://chromewebstore.google.com/detail/eddmlpagibjhokgnnmamalopafighoeb"><img src=".github/readme/browsers/chrome.svg" width="40" height="40" alt="" /><br /><b>Chrome</b></a></td>
+    <td align="center" width="110"><a href="https://addons.mozilla.org/addon/pintube/"><img src=".github/readme/browsers/firefox.svg" width="40" height="40" alt="" /><br /><b>Firefox</b></a></td>
+    <td align="center" width="110"><a href="https://microsoftedge.microsoft.com/addons/detail/jkmhlladdejcmkkjokplgncagoekdomd"><img src=".github/readme/browsers/edge.svg" width="40" height="40" alt="" /><br /><b>Edge</b></a></td>
+    <td align="center" width="110"><a href="https://chromewebstore.google.com/detail/eddmlpagibjhokgnnmamalopafighoeb"><img src=".github/readme/browsers/opera.svg" width="40" height="40" alt="" /><br /><b>Opera</b></a></td>
+    <td align="center" width="110"><a href="https://chromewebstore.google.com/detail/eddmlpagibjhokgnnmamalopafighoeb"><img src=".github/readme/browsers/brave.svg" width="40" height="40" alt="" /><br /><b>Brave</b></a></td>
+  </tr>
+</table>
+
+Opera and Brave install from the Chrome Web Store. Website: [pintube.app](https://pintube.app)
+
+<sub>Browser logos from [alrra/browser-logos](https://github.com/alrra/browser-logos) (MIT).</sub>
+
+## Repository
+
 | Folder | What it is |
 | --- | --- |
 | [`extension/`](extension) | Browser extension (WXT + React + TypeScript, Manifest V3) for Chrome, Edge, Opera, Brave and Firefox |
